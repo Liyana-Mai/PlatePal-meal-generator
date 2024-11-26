@@ -7,8 +7,56 @@
     <title>AI Meal Generator</title>
 </head>
 <body>
-    <h1>Welcome to the AI PlatePal Meal Plan Generator</h1>
+    <header>
+        <div class="logo">PlatePal</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="hero">
+            <h1>Welcome to PlatePal</h1>
+            <p>Your personalized meal planning assistant.</p>
+            <div>
+                <form>
+                     
+                    <input type="text" placeholder="Craving something specific? Let’s build your meal plan around it!" autocomplete="off" autofocus required/>
+                    <input type="submit" value="submit" />
+                </form>
+
+                <div id="mealPlan" class="meal-plan"></div>
+
+            </div>
+            <button class="cta">Get Started 🍝🍫🍕 </button>
+
+            <div>
+                The meal pan will go here
+            </div>
+
+        </section>
+
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Personalized meal plans</li>
+                <li>Recipe suggestions</li> 
+                <li>Calorie tracking</li>
+                <li>Shopping lists</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        This project was coded by Liyana Maisela, open-sourced on 
+        <a href="https://github.com/Liyana-Mai/PlatePal-meal-generator" target="_blank">GitHub</a> 
+        and hosted on 
+        <a href="https://platepal-ai.netlify.app/" target="_blank">Netlify</a>.
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
