@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/fresh-market-trial" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/dotine" rel="stylesheet">
+                           
+                
     <title>AI Meal Generator</title>
 </head>
 <body>
     <header>
         <div class="logo">PlatePal</div>
-        <nav>
+        <nav class="nav-links">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#features">Features</a></li>
@@ -24,20 +28,29 @@
             <p>Your personalized meal planning assistant.</p>
             <div>
                 <form>
-                     
-                    <input type="text" placeholder="Craving something specific? Let’s build your meal plan around it!" autocomplete="off" autofocus required/>
-                    <input type="submit" value="submit" />
+                    <input class="prompt" type="text" placeholder="Craving something specific? Let’s build your meal plan around it!🍝🍫🍕 " autocomplete="off" autofocus required/>
+                    <input class="btn" type="submit" value="submit" />
                 </form>
 
                 <div id="mealPlan" class="meal-plan"></div>
-
             </div>
-            <button class="cta">Get Started 🍝🍫🍕 </button>
 
             <div>
                 The meal pan will go here
             </div>
 
+        </section>
+
+        <section id="about" class="about">
+            <h2>ABout PlatePal</h2>
+            <p>Hi there! Welcome to PlatePal, your friendly meal planning assistant. We know how hectic life can get, so we’re here to make meal planning as easy and stress-free as possible.
+
+                With PlatePal, you can create personalized meal plans based on your cravings, dietary preferences, and goals.
+                Found a few ingredients in your fridge? No problem—we’ll help you whip up meals around them! Our user-friendly platform is designed to save you time, and inspire delicious recipes.
+                keep you on track with healthy eating.
+                
+                Let’s make meal planning simple, fun, and perfectly tailored to you. PlatePal is here to help you eat well and love every bite!
+                </p>
         </section>
 
         <section id="features" class="features">
