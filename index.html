@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/fresh-market-trial" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/dotine" rel="stylesheet">
-                           
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>                       
                 
     <title>AI Meal Generator</title>
 </head>
@@ -25,24 +25,22 @@
     <main>
         <section class="hero">
             <h1>Welcome to PlatePal</h1>
-            <p>Your personalized meal planning assistant.</p>
+            <h2 id="welcome-message"></h2>
+            <br/>
             <div>
-                <form>
-                    <input class="prompt" type="text" placeholder="Craving something specific? Let’s build your meal plan around it!🍝🍫🍕 " autocomplete="off" autofocus required/>
+                <form id="platepal-form">
+                    <input class="prompt" type="text" placeholder="Craving something specific? Let’s build your meal plan around it!🍝🍫🍕 " autocomplete="off" autofocus required />
                     <input class="btn" type="submit" value="submit" />
                 </form>
 
                 <div id="mealPlan" class="meal-plan"></div>
             </div>
 
-            <div>
-                The meal pan will go here
-            </div>
 
         </section>
 
         <section id="about" class="about">
-            <h2>ABout PlatePal</h2>
+            <h2>ABOUT</h2>
             <p>Hi there! Welcome to PlatePal, your friendly meal planning assistant. We know how hectic life can get, so we’re here to make meal planning as easy and stress-free as possible.
 
                 With PlatePal, you can create personalized meal plans based on your cravings, dietary preferences, and goals.
@@ -54,7 +52,7 @@
         </section>
 
         <section id="features" class="features">
-            <h2>Features</h2>
+            <h2>FEATURES</h2>
             <ul>
                 <li>Personalized meal plans</li>
                 <li>Recipe suggestions</li> 

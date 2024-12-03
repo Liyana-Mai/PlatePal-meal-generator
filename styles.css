@@ -26,6 +26,7 @@ header {
     background-color: #628B35;
     opacity: 0.9;
     padding: 1rem 2rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,10 +74,21 @@ nav {
     color: #fff;
 }
 
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ff9900; 
+  }
+  
+
 h1 {
-    font-family: 'Dotine', sans-serif;
+    font-family: 'Dotine', sans-serif;                           
                                                 
-                                                
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
 }
 
 .prompt {
@@ -89,46 +101,85 @@ h1 {
 }
 
 input:focus {
-    outline: none; /* Removes the outline on focus */
-    border: none;  /* Removes the border */
-  }
+    outline: none; 
+    border: none; 
+}
   
 
 .btn {
     padding: 20px;
     border: none;
     border-radius: 10px;
-    opacity: 3;
+    opacity: 0.9;
     margin-left: 10px;
 }
 
 .btn:hover {
     color: white;
     background-color: #e05a50;
-    opacity: 0.8;
+    opacity: 0.9;
 }
-
-
 
 .meal-plan {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.meal-plan div {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-items: center;
+  }
+  
+  .recipe {
+    padding: 20px;
+    border: white solid;
+    background-color: white;
+    opacity: 0.9;
+    color: #628B35;
+    border-radius: 10px;
+    width: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+  }
+  
+  .recipe img {
+    max-width: 80%;
+    border-radius: 5px;
+  }
+  
+  .recipe h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .recipe p {
+    color: #fff;
+  }
+  
+  .recipe a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 10px;
+    background-color: #ff6f61;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  #welcome-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+  }
+  
 
 
 .hero {
     text-align: center;
     padding: 3rem 1rem;
-    margin: 5rem;
+    margin: 6.5rem;
     color: white;
     border-radius: 10px;
     background-color: #628B35;
@@ -173,6 +224,7 @@ input:focus {
 
 footer {
     padding: 1rem 2rem;
+    width: 100%;
     text-align: center;
     font-weight: bold;
     color: #ff6f61;
