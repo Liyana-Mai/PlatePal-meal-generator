@@ -1,4 +1,4 @@
-// Typewriter Effect Function
+
 function typewriterEffect(text, elementId, delay = 100) {
     const element = document.querySelector(`#${elementId}`);
     let index = 0; 
@@ -17,8 +17,8 @@ function typewriterEffect(text, elementId, delay = 100) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const welcomeText = "Your personalized meal planning assistant! 🍳"; // The text to animate
-    typewriterEffect(welcomeText, "welcome-message"); // Call the effect on the #welcome-message element
+    const welcomeText = "Your personalized ai meal planning assistant! 🍳"; 
+    typewriterEffect(welcomeText, "welcome-message"); 
 });
 
 
@@ -35,9 +35,9 @@ async function generateMealPlan(event) {
     }
 
     try {
-        const response = await fetch(`${apiUrl}?query=${craving}&number=6&apiKey=${apiKey}`);
+        const response = await fetch(`${apiUrl}?query=${craving}&number=3&apiKey=${apiKey}`);
         const data = await response.json();
-        console.log(data); // Log the response data for debugging
+        console.log(data);
 
         if (data && data.results && data.results.length > 0) {
             displayMealPlan(data.results);
@@ -54,13 +54,21 @@ function displayMealPlan(recipes) {
     const mealPlanContainer = document.getElementById("mealPlan");
     mealPlanContainer.innerHTML = "";
 
+    mealPlanContainer.style.display = "grid";
+    mealPlanContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
+    mealPlanContainer.style.gap = "10px";
+    mealPlanContainer.style.padding = "20px";
+    mealPlanContainer.style.width = "70%";
+    mealPlanContainer.style.boxSizing = "border-box";
+    mealPlanContainer.style.justifyItems = "center";
+
     recipes.forEach(recipe => {
         const recipeElement = document.createElement("div");
         recipeElement.classList.add("recipe");
         recipeElement.innerHTML = `
-            <h3>${recipe.title}</h3>
+           <div class="recipe-container"> <h3>${recipe.title}</h3>
             <img src="${recipe.image}" alt="${recipe.title}" />
-            <p>Source: <a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">View Recipe</a></p>
+            <p>Source: <button><a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">View Recipe</a></button></p></div>
         `;
         mealPlanContainer.appendChild(recipeElement);
     });
